@@ -29,20 +29,25 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Colors.green,
-      body: Column(
-        children: [
+      appBar: AppBar(
+        title: Text(""),
+      ),
+      backgroundColor: Colors.white,
+      body: Container(
+        width: 100.w,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
 
 
 
 
-          Container(
-            color: Colors.white,
-            child: Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-
-
-
+                Icon(Icons.local_mall_outlined,
+                  color: Colors.green,
+                ),
                 Container(
                   margin: EdgeInsets.all(10),
                   padding: EdgeInsets.all(10),
@@ -50,13 +55,15 @@ class _SearchPageState extends State<SearchPage> {
                   height: 40,
                   decoration: BoxDecoration(
                       border: Border.all(
-                          color: Colors.black,
+                          color: Colors.transparent,
                           width: 1
                       )
                   ),
 
 
                   child: DropdownButton<String>(
+
+                    hint: Text("Select product catagory"),
                     isExpanded: true,
                     value: dropdownValue,
                     icon: const Icon(Icons.arrow_drop_down),
@@ -83,8 +90,16 @@ class _SearchPageState extends State<SearchPage> {
                     }).toList(),
                   ),
                 ),
+              ],
+            ),
 
 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.add_shopping_cart,
+                  color: Colors.green,
+                ),
                 Container(
                   margin: EdgeInsets.all(10),
                   padding: EdgeInsets.all(10),
@@ -92,13 +107,14 @@ class _SearchPageState extends State<SearchPage> {
                   height: 40,
                   decoration: BoxDecoration(
                       border: Border.all(
-                          color: Colors.black,
+                          color: Colors.transparent,
                           width: 1
                       )
                   ),
 
 
                   child: DropdownButton<String>(
+                    hint: Text("Select product"),
                     isExpanded: true,
                     value: dropdownValue1,
                     icon: const Icon(Icons.arrow_drop_down),
@@ -125,9 +141,17 @@ class _SearchPageState extends State<SearchPage> {
                     }).toList(),
                   ),
                 ),
+              ],
+            ),
 
 
 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.store,
+                  color: Colors.green,
+                ),
                 Container(
                   margin: EdgeInsets.all(10),
                   padding: EdgeInsets.all(10),
@@ -135,13 +159,14 @@ class _SearchPageState extends State<SearchPage> {
                   height: 40,
                   decoration: BoxDecoration(
                       border: Border.all(
-                          color: Colors.black,
+                          color: Colors.transparent,
                           width: 1
                       )
                   ),
 
 
                   child: DropdownButton<String>(
+                    hint: Text("Select Market"),
                     isExpanded: true,
                     value: dropdownValue2,
                     icon: const Icon(Icons.arrow_drop_down),
@@ -168,9 +193,17 @@ class _SearchPageState extends State<SearchPage> {
                     }).toList(),
                   ),
                 ),
+              ],
+            ),
 
 
 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.account_tree_outlined,
+                  color: Colors.green,
+                ),
                 Container(
                   margin: EdgeInsets.all(10),
                   padding: EdgeInsets.all(10),
@@ -178,13 +211,14 @@ class _SearchPageState extends State<SearchPage> {
                   height: 40,
                   decoration: BoxDecoration(
                       border: Border.all(
-                          color: Colors.black,
+                          color: Colors.transparent,
                           width: 1
                       )
                   ),
 
 
                   child: DropdownButton<String>(
+                    hint: Text("Select price Type"),
                     isExpanded: true,
                     value: dropdownValue3,
                     icon: const Icon(Icons.arrow_drop_down),
@@ -211,12 +245,31 @@ class _SearchPageState extends State<SearchPage> {
                     }).toList(),
                   ),
                 ),
-
-
               ],
             ),
-          ),
-        ],
+
+
+            Container(
+              width: 60.w,
+              height: 40,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.search),
+                  Text("Search"),
+                ],
+              ),
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(5)
+              ),
+            )
+
+
+
+
+          ],
+        ),
       ),
     );
   }

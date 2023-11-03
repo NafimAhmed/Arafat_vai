@@ -3,6 +3,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class Home extends StatefulWidget{
@@ -31,17 +32,46 @@ class _HomeState extends State<Home> {
           children: [
 
             Container(
-              width: 60.w,
+              width: 80.w,
+              height: 60.h,
               decoration: BoxDecoration(
                 color: Colors.white,
+
                 borderRadius: BorderRadius.circular(10)
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Select"),
-                  Text("Your option before start"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Text("Select",
+                          style: GoogleFonts.inter(
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+                    child: Row(
+                      children: [
+                        Text("Your option before start",
+                          style: GoogleFonts.inter(
+                            fontSize: 12,
+                            color: Colors.green
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
 
                   Container(
                     margin: EdgeInsets.all(10),
@@ -50,14 +80,15 @@ class _HomeState extends State<Home> {
                     height: 40,
                     decoration: BoxDecoration(
                         border: Border.all(
-                            color: Colors.black,
-                            width: 1
+                            color: Colors.transparent,
+                            width: 0
                         )
                     ),
 
 
                     child: DropdownButton<String>(
                       isExpanded: true,
+                      hint: Text("Choose Your Language"),
                       value: dropdownValue,
                       icon: const Icon(Icons.arrow_drop_down),
                       elevation: 16,
@@ -92,13 +123,14 @@ class _HomeState extends State<Home> {
                     height: 40,
                     decoration: BoxDecoration(
                         border: Border.all(
-                            color: Colors.black,
-                            width: 1
+                            color: Colors.transparent,
+                            width: 0
                         )
                     ),
 
 
                     child: DropdownButton<String>(
+                      hint: Text("Choose Currency"),
                       isExpanded: true,
                       value: dropdownValue1,
                       icon: const Icon(Icons.arrow_drop_down),
@@ -128,12 +160,15 @@ class _HomeState extends State<Home> {
 
 
 
-                  Center(
-                    child: Container(
-                      height: 40,
-                      width: 60.w,
-                      child: Text("Continue"),
+                  Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.green
                     ),
+                    height: 40,
+                    width: 60.w,
+                    child: Text("Continue"),
                   )
 
 
