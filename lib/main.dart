@@ -1,6 +1,7 @@
 import 'package:arafat_vai_new/home.dart';
 import 'package:arafat_vai_new/registration.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 import 'search_page.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType){
-      return MaterialApp(
+      return GetMaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
 

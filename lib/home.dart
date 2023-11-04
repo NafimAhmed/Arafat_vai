@@ -2,7 +2,9 @@
 
 
 
+import 'package:arafat_vai_new/search_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
@@ -177,15 +179,20 @@ class _HomeState extends State<Home> {
 
 
 
-                  Container(
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.green
+                  InkWell(
+                    onTap: (){
+                      Get.to(SearchPage());
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.green
+                      ),
+                      height: 40,
+                      width: 60.w,
+                      child: Text("Continue"),
                     ),
-                    height: 40,
-                    width: 60.w,
-                    child: Text("Continue"),
                   )
 
 
