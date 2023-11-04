@@ -2,7 +2,8 @@
 
 
 
-import 'package:arafat_vai_new/search_page.dart';
+// import 'package:arafat_vai_new/search_page.dart';
+import 'package:arafat_vai_new/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -181,7 +182,7 @@ class _HomeState extends State<Home> {
 
                   InkWell(
                     onTap: (){
-                      Get.to(SearchPage());
+                      Get.to(SignInPage());
                     },
                     child: Container(
                       alignment: Alignment.center,
@@ -190,7 +191,7 @@ class _HomeState extends State<Home> {
                         color: Colors.green
                       ),
                       height: 40,
-                      width: 60.w,
+                      width: 80.w,
                       child: Text("Continue"),
                     ),
                   )
