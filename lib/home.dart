@@ -12,8 +12,8 @@ class Home extends StatefulWidget{
 }
 
 class _HomeState extends State<Home> {
-  List<String> list = ["#2387673", "#099787", "#13433", "#454534"];
-  List<String> list1 = ["#2387673", "#099787", "#13433", "#454534"];
+  List<String> list = ["Bangla", "English"];
+  List<String> list1 = ["BDT","Doller","Euro"];
 
   String? dropdownValue;
   String? dropdownValue1;
@@ -73,89 +73,106 @@ class _HomeState extends State<Home> {
                     ),
                   ),
 
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    padding: EdgeInsets.all(10),
-                    width: 80.w,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        border: Border.all(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+
+                      Icon(Icons.translate),
+
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10),
+                        width: 60.w,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Colors.transparent,
+                                width: 0
+                            )
+                        ),
+
+
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          hint: Text("Choose Your Language"),
+                          value: dropdownValue,
+                          icon: const Icon(Icons.arrow_drop_down),
+                          elevation: 16,
+                          style: const TextStyle(color: Colors.deepPurple),
+                          underline: Container(
+                            height: 2,
                             color: Colors.transparent,
-                            width: 0
-                        )
-                    ),
+                          ),
 
 
-                    child: DropdownButton<String>(
-                      isExpanded: true,
-                      hint: Text("Choose Your Language"),
-                      value: dropdownValue,
-                      icon: const Icon(Icons.arrow_drop_down),
-                      elevation: 16,
-                      style: const TextStyle(color: Colors.deepPurple),
-                      underline: Container(
-                        height: 2,
-                        color: Colors.transparent,
+
+                          onChanged: (String? value) {
+                            // This is called when the user selects an item.
+                            setState(() {
+                              dropdownValue = value!;
+                            });
+                          },
+                          items: list.map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                        ),
                       ),
-
-
-
-                      onChanged: (String? value) {
-                        // This is called when the user selects an item.
-                        setState(() {
-                          dropdownValue = value!;
-                        });
-                      },
-                      items: list.map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
+                    ],
                   ),
 
 
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    padding: EdgeInsets.all(10),
-                    width: 80.w,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        border: Border.all(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+
+                      Icon(Icons.euro_outlined),
+
+
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10),
+                        width: 60.w,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Colors.transparent,
+                                width: 0
+                            )
+                        ),
+
+
+                        child: DropdownButton<String>(
+                          hint: Text("Choose Currency"),
+                          isExpanded: true,
+                          value: dropdownValue1,
+                          icon: const Icon(Icons.arrow_drop_down),
+                          elevation: 16,
+                          style: const TextStyle(color: Colors.deepPurple),
+                          underline: Container(
+                            height: 2,
                             color: Colors.transparent,
-                            width: 0
-                        )
-                    ),
+                          ),
 
 
-                    child: DropdownButton<String>(
-                      hint: Text("Choose Currency"),
-                      isExpanded: true,
-                      value: dropdownValue1,
-                      icon: const Icon(Icons.arrow_drop_down),
-                      elevation: 16,
-                      style: const TextStyle(color: Colors.deepPurple),
-                      underline: Container(
-                        height: 2,
-                        color: Colors.transparent,
+
+                          onChanged: (String? value) {
+                            // This is called when the user selects an item.
+                            setState(() {
+                              dropdownValue1 = value!;
+                            });
+                          },
+                          items: list1.map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                        ),
                       ),
-
-
-
-                      onChanged: (String? value) {
-                        // This is called when the user selects an item.
-                        setState(() {
-                          dropdownValue1 = value!;
-                        });
-                      },
-                      items: list1.map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
+                    ],
                   ),
 
 
