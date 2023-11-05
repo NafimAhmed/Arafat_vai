@@ -1,8 +1,11 @@
 
 
 
+import 'package:arafat_vai_new/registration.dart';
+import 'package:arafat_vai_new/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
@@ -162,8 +165,9 @@ class SignInPage extends StatelessWidget{
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Your whatsapp number",
+                    Text("Don't get OTP? Resend now",
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
@@ -179,7 +183,7 @@ class SignInPage extends StatelessWidget{
 
               InkWell(
                 onTap: (){
-                  //Get.to(SignInPage());
+                  Get.to(SearchPage());
                 },
                 child: Container(
                   alignment: Alignment.center,
@@ -191,8 +195,30 @@ class SignInPage extends StatelessWidget{
                   width: 80.w,
                   child: Text("Sign in"),
                 ),
-              )
+              ),
 
+
+
+              InkWell(
+                onTap: (){
+                  Get.to(Registration());
+                },
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Don't have account? Register now",
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            color: Colors.white
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
 
 
 

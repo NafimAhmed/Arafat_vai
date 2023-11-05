@@ -5,6 +5,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class RegistrationOTP extends StatelessWidget{
@@ -18,6 +19,21 @@ class RegistrationOTP extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
 
+          Container(
+            width: 80.w,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("OTP",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                  ),
+                ),
+              ],
+            ),
+          ),
 
           // Container(
           //
