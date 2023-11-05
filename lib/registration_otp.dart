@@ -35,6 +35,26 @@ class RegistrationOTP extends StatelessWidget{
             ),
           ),
 
+          SizedBox(
+            height: 10,
+          ),
+
+          Container(
+            width: 80.w,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("Provide 4 digit OTP from your whatsapp",
+                  style: GoogleFonts.poppins(
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                  ),
+                ),
+              ],
+            ),
+          ),
+
           // Container(
           //
           //
@@ -93,6 +113,9 @@ class RegistrationOTP extends StatelessWidget{
           //   ),
           // ),
 
+          SizedBox(
+            height: 30,
+          ),
 
 
           OtpTextField(
@@ -120,6 +143,11 @@ class RegistrationOTP extends StatelessWidget{
           ),
 
 
+          SizedBox(
+            height: 30,
+          ),
+
+
 
           InkWell(
             onTap: (){
@@ -133,7 +161,15 @@ class RegistrationOTP extends StatelessWidget{
               ),
               height: 40,
               width: 80.w,
-              child: Text("Sign in"),
+              child: Text("Continue",
+
+                style: GoogleFonts.poppins(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.green
+                ),
+
+              ),
             ),
           )
 
